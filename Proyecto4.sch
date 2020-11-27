@@ -25,19 +25,6 @@ U 5E9876A1
 F0 "Connectors" 50
 F1 "connectors.sch" 50
 $EndSheet
-$Comp
-L DynOSSAT:+3V3_SAT #PWR?
-U 1 1 5FC9A6FB
-P 3800 3500
-AR Path="/5E9876A1/5FC9A6FB" Ref="#PWR?"  Part="1" 
-AR Path="/5FC9A6FB" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 3800 3350 50  0001 C CNN
-F 1 "+3V3_SAT" H 3815 3673 50  0000 C CNN
-F 2 "" H 3800 3500 50  0001 C CNN
-F 3 "" H 3800 3500 50  0001 C CNN
-	1    3800 3500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5300 1800 5300 2300
 $Comp
@@ -117,8 +104,6 @@ F 3 "https://www.st.com/resource/en/datasheet/stm32wl55cc.pdf" H 4950 2400 50  0
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3800 3500 3900 3500
-Wire Wire Line
 	3900 3700 3900 3500
 Connection ~ 3900 3500
 Wire Wire Line
@@ -180,8 +165,6 @@ $EndComp
 Wire Wire Line
 	4950 2000 4950 2050
 Wire Wire Line
-	4950 1800 5300 1800
-Wire Wire Line
 	5600 2000 5600 1950
 Wire Wire Line
 	5500 2300 5500 1750
@@ -199,8 +182,6 @@ Text GLabel 4000 2700 0    50   Input ~ 0
 VDDSMPS-VDDRF
 Text GLabel 6350 1900 2    50   Input ~ 0
 VDDSMPS-VDDRF
-Wire Wire Line
-	6350 1900 6000 1900
 Connection ~ 6000 1900
 Wire Wire Line
 	4000 2700 4100 2700
@@ -291,19 +272,6 @@ Text GLabel 6650 4500 2    50   Output ~ 0
 I2C_BUS_SDA
 Text GLabel 6650 4400 2    50   Output ~ 0
 I2C_BUS_SCL
-$Comp
-L DynOSSAT:+3V3_EPS #PWR?
-U 1 1 5FD17152
-P 5300 1750
-AR Path="/5DB0D1BA/5FD17152" Ref="#PWR?"  Part="1" 
-AR Path="/5FD17152" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5300 1600 50  0001 C CNN
-F 1 "+3V3_EPS" H 5315 1923 50  0000 C CNN
-F 2 "" H 5300 1750 50  0001 C CNN
-F 3 "" H 5300 1750 50  0001 C CNN
-	1    5300 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5300 1750 5300 1800
 Connection ~ 5300 1800
@@ -323,8 +291,8 @@ U 1 1 5FD31201
 P 4750 2200
 AR Path="/5DB0D1BA/5FD31201" Ref="#PWR?"  Part="1" 
 AR Path="/5E9876A1/5FD31201" Ref="#PWR?"  Part="1" 
-AR Path="/5FD31201" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4750 2050 50  0001 C CNN
+AR Path="/5FD31201" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 4750 2050 50  0001 C CNN
 F 1 "+BATT" H 4765 2373 50  0000 C CNN
 F 2 "" H 4750 2200 50  0001 C CNN
 F 3 "" H 4750 2200 50  0001 C CNN
@@ -340,8 +308,8 @@ L Device:C_Small C?
 U 1 1 5FD3277E
 P 4250 2300
 AR Path="/5DB0D1BA/5FD3277E" Ref="C?"  Part="1" 
-AR Path="/5FD3277E" Ref="C?"  Part="1" 
-F 0 "C?" H 4342 2346 50  0000 L CNN
+AR Path="/5FD3277E" Ref="C8"  Part="1" 
+F 0 "C8" H 4342 2346 50  0000 L CNN
 F 1 "0.1uF" H 4342 2255 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4250 2300 50  0001 C CNN
 F 3 "~" H 4250 2300 50  0001 C CNN
@@ -357,8 +325,8 @@ L power:GND #PWR?
 U 1 1 5FD34D1F
 P 4100 2150
 AR Path="/5DB0D1BA/5FD34D1F" Ref="#PWR?"  Part="1" 
-AR Path="/5FD34D1F" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4100 1900 50  0001 C CNN
+AR Path="/5FD34D1F" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 4100 1900 50  0001 C CNN
 F 1 "GND" H 4105 1977 50  0000 C CNN
 F 2 "" H 4100 2150 50  0001 C CNN
 F 3 "" H 4100 2150 50  0001 C CNN
@@ -406,4 +374,98 @@ EPS_nRST
 Wire Wire Line
 	4100 2500 4250 2500
 Connection ~ 4250 2500
+Text GLabel 9250 4250 2    50   Output ~ 0
+I2C_BUS_SDA
+Text GLabel 9250 4150 2    50   Output ~ 0
+I2C_BUS_SCL
+$Comp
+L Device:R_Small R?
+U 1 1 5FD5C99A
+P 8850 3800
+AR Path="/5DB0D1BA/5FD5C99A" Ref="R?"  Part="1" 
+AR Path="/5FD5C99A" Ref="R2"  Part="1" 
+F 0 "R2" H 8791 3754 50  0000 R CNN
+F 1 "47k" H 8791 3845 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8850 3800 50  0001 C CNN
+F 3 "~" H 8850 3800 50  0001 C CNN
+	1    8850 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5FD5E027
+P 8600 3950
+AR Path="/5DB0D1BA/5FD5E027" Ref="R?"  Part="1" 
+AR Path="/5FD5E027" Ref="R1"  Part="1" 
+F 0 "R1" H 8541 3904 50  0000 R CNN
+F 1 "47k" H 8541 3995 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8600 3950 50  0001 C CNN
+F 3 "~" H 8600 3950 50  0001 C CNN
+	1    8600 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8600 4050 8600 4250
+Wire Wire Line
+	8600 4250 9250 4250
+Wire Wire Line
+	8850 3900 8850 4150
+Wire Wire Line
+	8850 4150 9250 4150
+Wire Wire Line
+	4950 1800 5300 1800
+$Comp
+L DynOSSAT:+3V3_EPS #PWR?
+U 1 1 5FD17152
+P 5300 1750
+AR Path="/5DB0D1BA/5FD17152" Ref="#PWR?"  Part="1" 
+AR Path="/5FD17152" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 5300 1600 50  0001 C CNN
+F 1 "+3V3_EPS" H 5315 1923 50  0000 C CNN
+F 2 "" H 5300 1750 50  0001 C CNN
+F 3 "" H 5300 1750 50  0001 C CNN
+	1    5300 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L DynOSSAT:+3V3_EPS #PWR?
+U 1 1 5FD62AFE
+P 8700 3500
+AR Path="/5DB0D1BA/5FD62AFE" Ref="#PWR?"  Part="1" 
+AR Path="/5FD62AFE" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 8700 3350 50  0001 C CNN
+F 1 "+3V3_EPS" H 8715 3673 50  0000 C CNN
+F 2 "" H 8700 3500 50  0001 C CNN
+F 3 "" H 8700 3500 50  0001 C CNN
+	1    8700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8600 3850 8600 3500
+Wire Wire Line
+	8600 3500 8700 3500
+Wire Wire Line
+	8850 3700 8850 3500
+Wire Wire Line
+	8850 3500 8700 3500
+Connection ~ 8700 3500
+$Comp
+L DynOSSAT:+3V3_EPS #PWR?
+U 1 1 5FDA56F4
+P 3400 3200
+AR Path="/5DB0D1BA/5FDA56F4" Ref="#PWR?"  Part="1" 
+AR Path="/5FDA56F4" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 3400 3050 50  0001 C CNN
+F 1 "+3V3_EPS" H 3415 3373 50  0000 C CNN
+F 2 "" H 3400 3200 50  0001 C CNN
+F 3 "" H 3400 3200 50  0001 C CNN
+	1    3400 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3200 3400 3500
+Wire Wire Line
+	3400 3500 3900 3500
+Wire Wire Line
+	6350 1900 6000 1900
 $EndSCHEMATC

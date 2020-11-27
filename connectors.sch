@@ -574,50 +574,6 @@ Wire Wire Line
 	6100 2300 6550 2300
 Text GLabel 7200 1350 2    50   Input ~ 0
 PV
-$Comp
-L Connector:Conn_01x05_Female J7
-U 1 1 5F926A07
-P 9900 4750
-F 0 "J7" H 9928 4776 50  0000 L CNN
-F 1 "Conn_01x05_Female" H 9928 4685 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" H 9900 4750 50  0001 C CNN
-F 3 "~" H 9900 4750 50  0001 C CNN
-	1    9900 4750
-	1    0    0    -1  
-$EndComp
-Text GLabel 9400 4650 0    50   Input ~ 0
-EPS_SWCLK
-Text GLabel 9400 4750 0    50   Input ~ 0
-EPS_SWDIO
-Text GLabel 9400 4850 0    50   Input ~ 0
-EPS_nRST
-$Comp
-L power:GND #PWR?
-U 1 1 5F92FA82
-P 9500 5050
-AR Path="/5F92FA82" Ref="#PWR?"  Part="1" 
-AR Path="/5E9876A1/5F92FA82" Ref="#PWR040"  Part="1" 
-F 0 "#PWR040" H 9500 4800 50  0001 C CNN
-F 1 "GND" H 9505 4877 50  0000 C CNN
-F 2 "" H 9500 5050 50  0001 C CNN
-F 3 "" H 9500 5050 50  0001 C CNN
-	1    9500 5050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9700 4950 9500 4950
-Wire Wire Line
-	9500 4950 9500 5050
-Wire Wire Line
-	9700 4850 9400 4850
-Wire Wire Line
-	9400 4750 9700 4750
-Wire Wire Line
-	9700 4650 9400 4650
-Wire Wire Line
-	9500 4500 9500 4550
-Wire Wire Line
-	9500 4550 9700 4550
 Wire Wire Line
 	3050 1850 3650 1850
 Wire Wire Line
@@ -638,17 +594,6 @@ Text GLabel 1950 1850 0    50   Input ~ 0
 SAT_PWR_EN
 Text GLabel 1950 4650 0    50   Input ~ 0
 SAT_PWR_EN
-$Comp
-L DynOSSAT:+3V3_EPS #PWR039
-U 1 1 5F109FF8
-P 9500 4500
-F 0 "#PWR039" H 9500 4350 50  0001 C CNN
-F 1 "+3V3_EPS" H 9515 4673 50  0000 C CNN
-F 2 "" H 9500 4500 50  0001 C CNN
-F 3 "" H 9500 4500 50  0001 C CNN
-	1    9500 4500
-	1    0    0    -1  
-$EndComp
 $Comp
 L DynOSSAT:+3V3_SAT #PWR019
 U 1 1 5F10AB77
@@ -747,8 +692,6 @@ F 3 "~" H 5750 3700 50  0001 C CNN
 	1    5750 3700
 	-1   0    0    -1  
 $EndComp
-Text Notes 9350 4100 0    50   ~ 0
-J-LINK MCU connector
 Text Notes 5700 3200 0    50   ~ 0
 Battery connector
 Text Notes 6000 1000 0    50   ~ 0
@@ -779,14 +722,6 @@ Wire Notes Line
 	6750 3050 5300 3050
 Wire Notes Line
 	5300 3050 5300 4250
-Wire Notes Line
-	8750 5500 10850 5500
-Wire Notes Line
-	10850 5500 10850 3900
-Wire Notes Line
-	10850 3900 8750 3900
-Wire Notes Line
-	8750 3900 8750 5500
 $Comp
 L DynOSSAT:+3V3_SAT #PWR027
 U 1 1 5F10B0F2
